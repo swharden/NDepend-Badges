@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v2
+      - name: ✨ Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          include-prerelease: true
+      - name: 🚚 Restore
+        run: dotnet restore ./src
+      - name: 🛠️ Build
+        run: dotnet build ./src
+      - name: 🧪 Test
+        run: dotnet test ./src
