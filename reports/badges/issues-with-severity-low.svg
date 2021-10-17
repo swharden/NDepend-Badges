@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink' width='181.41016' height='20' role='img' aria-label='languages: 5'>
+    <title># Issues with severity Low: 150</title>
+    <linearGradient id='s' x2='0' y2='100%'>
+        <stop offset='0' stop-color='#bbb' stop-opacity='.1'/>
+        <stop offset='1' stop-opacity='.1'/>
+    </linearGradient>
+    <clipPath id='r'>
+        <rect width='181.41016' height='20' rx='3' fill='#fff'/>
+    </clipPath>
+    <g clip-path='url(#r)'>
+        <rect width='149.38867' height='20' fill='#555'/>
+        <rect x='149.38867' width='32.021484' height='20' fill='#007ec6'/>
+        <rect width='181.41016' height='20' fill='url(#s)'/>
+    </g>
+    <g fill='#FFF' text-anchor='center' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' text-rendering='geometricPrecision' font-size='110'>
+        <text aria-hidden='true' x='40' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='1393.8867'># Issues with severity Low</text>
+        <text x='40' y='140' transform='scale(.1)' fill='#FFF' textLength='1393.8867'># Issues with severity Low</text>
+        <text aria-hidden='true' x='1533.8867' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='200.21484'>150</text>
+        <text x='1533.8867' y='140' transform='scale(.1)' fill='#FFF' textLength='200.21484'>150</text>
+    </g>
+</svg>

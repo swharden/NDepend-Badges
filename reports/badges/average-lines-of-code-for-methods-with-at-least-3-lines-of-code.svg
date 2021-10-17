@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink' width='404.9043' height='20' role='img' aria-label='languages: 5'>
+    <title>Average # Lines of Code for Methods with at least 3 Lines of Code: 10.96</title>
+    <linearGradient id='s' x2='0' y2='100%'>
+        <stop offset='0' stop-color='#bbb' stop-opacity='.1'/>
+        <stop offset='1' stop-opacity='.1'/>
+    </linearGradient>
+    <clipPath id='r'>
+        <rect width='404.9043' height='20' rx='3' fill='#fff'/>
+    </clipPath>
+    <g clip-path='url(#r)'>
+        <rect width='362.875' height='20' fill='#555'/>
+        <rect x='362.875' width='42.029297' height='20' fill='#007ec6'/>
+        <rect width='404.9043' height='20' fill='url(#s)'/>
+    </g>
+    <g fill='#FFF' text-anchor='center' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' text-rendering='geometricPrecision' font-size='110'>
+        <text aria-hidden='true' x='40' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='3528.75'>Average # Lines of Code for Methods with at least 3 Lines of Code</text>
+        <text x='40' y='140' transform='scale(.1)' fill='#FFF' textLength='3528.75'>Average # Lines of Code for Methods with at least 3 Lines of Code</text>
+        <text aria-hidden='true' x='3668.75' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='300.29297'>10.96</text>
+        <text x='3668.75' y='140' transform='scale(.1)' fill='#FFF' textLength='300.29297'>10.96</text>
+    </g>
+</svg>

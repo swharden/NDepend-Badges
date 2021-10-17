@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink' width='198.7539' height='20' role='img' aria-label='languages: 5'>
+    <title># Third-Party Methods Used: 1097</title>
+    <linearGradient id='s' x2='0' y2='100%'>
+        <stop offset='0' stop-color='#bbb' stop-opacity='.1'/>
+        <stop offset='1' stop-opacity='.1'/>
+    </linearGradient>
+    <clipPath id='r'>
+        <rect width='198.7539' height='20' rx='3' fill='#fff'/>
+    </clipPath>
+    <g clip-path='url(#r)'>
+        <rect width='160.0586' height='20' fill='#555'/>
+        <rect x='160.0586' width='38.695312' height='20' fill='#007ec6'/>
+        <rect width='198.7539' height='20' fill='url(#s)'/>
+    </g>
+    <g fill='#FFF' text-anchor='center' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' text-rendering='geometricPrecision' font-size='110'>
+        <text aria-hidden='true' x='40' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='1500.5859'># Third-Party Methods Used</text>
+        <text x='40' y='140' transform='scale(.1)' fill='#FFF' textLength='1500.5859'># Third-Party Methods Used</text>
+        <text aria-hidden='true' x='1640.5859' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='266.95312'>1097</text>
+        <text x='1640.5859' y='140' transform='scale(.1)' fill='#FFF' textLength='266.95312'>1097</text>
+    </g>
+</svg>

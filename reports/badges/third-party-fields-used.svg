@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink' width='171.39062' height='20' role='img' aria-label='languages: 5'>
+    <title># Third-Party Fields Used: 20</title>
+    <linearGradient id='s' x2='0' y2='100%'>
+        <stop offset='0' stop-color='#bbb' stop-opacity='.1'/>
+        <stop offset='1' stop-opacity='.1'/>
+    </linearGradient>
+    <clipPath id='r'>
+        <rect width='171.39062' height='20' rx='3' fill='#fff'/>
+    </clipPath>
+    <g clip-path='url(#r)'>
+        <rect width='146.04297' height='20' fill='#555'/>
+        <rect x='146.04297' width='25.347656' height='20' fill='#007ec6'/>
+        <rect width='171.39062' height='20' fill='url(#s)'/>
+    </g>
+    <g fill='#FFF' text-anchor='center' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' text-rendering='geometricPrecision' font-size='110'>
+        <text aria-hidden='true' x='40' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='1360.4297'># Third-Party Fields Used</text>
+        <text x='40' y='140' transform='scale(.1)' fill='#FFF' textLength='1360.4297'># Third-Party Fields Used</text>
+        <text aria-hidden='true' x='1500.4297' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='133.47656'>20</text>
+        <text x='1500.4297' y='140' transform='scale(.1)' fill='#FFF' textLength='133.47656'>20</text>
+    </g>
+</svg>
