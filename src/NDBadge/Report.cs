@@ -19,7 +19,7 @@ namespace NDBadge
             }
         }
 
-        public void MakeBadge(Metric metric, string saveFolder)
+        public void MakeBadgePNG(Metric metric, string saveFolder)
         {
             var badge = new Badge(metric.Name, metric.Value);
             string badgeFilename = WebSafe(metric.Name) + ".png";
@@ -28,10 +28,24 @@ namespace NDBadge
             Console.WriteLine(badgePath);
         }
 
-        public void MakeBadges(Metric[] metrics, string saveFolder)
+        public void MakeBadgeSVG(Metric metric, string saveFolder)
+        {
+            var badge = new Badge(metric.Name, metric.Value);
+            string badgeFilename = WebSafe(metric.Name) + ".svg";
+            string badgePath = Path.Combine(saveFolder, badgeFilename);
+            badge.SaveSVG(badgePath);
+            Console.WriteLine(badgePath);
+        }
+
+        public void MakeBadges(Metric[] metrics, string saveFolder, bool png = true, bool svg = true)
         {
             foreach (var metric in metrics)
-                MakeBadge(metric, saveFolder);
+            {
+                if (png)
+                    MakeBadgePNG(metric, saveFolder);
+                if (svg)
+                    MakeBadgeSVG(metric, saveFolder);
+            }
         }
 
         /// <summary>
@@ -41,7 +55,7 @@ namespace NDBadge
         {
             char[] chars = text.ToLowerInvariant()
                 .ToCharArray()
-                .Select(c => char.IsLetterOrDigit(c) ? c : '-')
+                .Select(c => (char.IsLetterOrDigit(c) || c == '_') ? c : '-')
                 .ToArray();
 
             string safe = new(chars);

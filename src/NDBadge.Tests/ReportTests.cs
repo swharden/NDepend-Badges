@@ -35,7 +35,7 @@ namespace NDBadge.Tests
             Directory.CreateDirectory(outputFolder);
 
             var report = new Report(REPORT_PATH);
-            report.MakeBadges(report.LatestMetrics, outputFolder);
+            report.MakeBadges(report.LatestMetrics, outputFolder, png: true, svg: true);
         }
     }
 }

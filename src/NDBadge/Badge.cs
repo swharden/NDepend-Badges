@@ -30,6 +30,44 @@ namespace NDBadge
             ValueSize = MeasureString(value);
         }
 
+        public void SaveSVG(string svgFilePath)
+        {
+            float leftTextWidth = NameSize.Width;
+            float rightTextWidth = ValueSize.Width;
+            float imgWidth = leftTextWidth + rightTextWidth + 22;
+            float leftBackgroundWidth = leftTextWidth + 10;
+            float rightBackgroundWidth = imgWidth - leftBackgroundWidth;
+            float imgHeight = 20;
+            string colorLeft = "#555";
+            string colorRight = "#007ec6";
+            string colorText = "#FFF";
+
+            string svg = $@"
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink' width='{imgWidth}' height='{imgHeight}' role='img' aria-label='languages: 5'>
+    <title>{Name}: {Value}</title>
+    <linearGradient id='s' x2='0' y2='100%'>
+        <stop offset='0' stop-color='#bbb' stop-opacity='.1'/>
+        <stop offset='1' stop-opacity='.1'/>
+    </linearGradient>
+    <clipPath id='r'>
+        <rect width='{imgWidth}' height='{imgHeight}' rx='3' fill='#fff'/>
+    </clipPath>
+    <g clip-path='url(#r)'>
+        <rect width='{leftBackgroundWidth}' height='{imgHeight}' fill='{colorLeft}'/>
+        <rect x='{leftBackgroundWidth}' width='{rightBackgroundWidth}' height='{imgHeight}' fill='{colorRight}'/>
+        <rect width='{imgWidth}' height='{imgHeight}' fill='url(#s)'/>
+    </g>
+    <g fill='{colorText}' text-anchor='center' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' text-rendering='geometricPrecision' font-size='110'>
+        <text aria-hidden='true' x='{40}' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='{leftTextWidth * 10}'>{Name}</text>
+        <text x='{40}' y='140' transform='scale(.1)' fill='{colorText}' textLength='{leftTextWidth * 10}'>{Name}</text>
+        <text aria-hidden='true' x='{40 + leftBackgroundWidth * 10}' y='150' fill='#010101' fill-opacity='.3' transform='scale(.1)' textLength='{rightTextWidth * 10}'>{Value}</text>
+        <text x='{40 + leftBackgroundWidth * 10}' y='140' transform='scale(.1)' fill='{colorText}' textLength='{rightTextWidth * 10}'>{Value}</text>
+    </g>
+</svg>".Trim();
+            System.IO.File.WriteAllText(svgFilePath, svg);
+        }
+
         public void SavePng(string pngFilePath, float scale = 1)
         {
             float totalWidth = NameSize.Width + ValueSize.Width;
