@@ -19,6 +19,39 @@ namespace NDBadge
             }
         }
 
+        public void MakeBadge(Metric metric, string saveFolder)
+        {
+            var badge = new Badge(metric.Name, metric.Value);
+            string badgeFilename = WebSafe(metric.Name) + ".png";
+            string badgePath = Path.Combine(saveFolder, badgeFilename);
+            badge.SavePng(badgePath);
+            Console.WriteLine(badgePath);
+        }
+
+        public void MakeBadges(Metric[] metrics, string saveFolder)
+        {
+            foreach (var metric in metrics)
+                MakeBadge(metric, saveFolder);
+        }
+
+        /// <summary>
+        /// Return the input string modified to contain only numbers, lowercase letters, hyphens, and underscores.
+        /// </summary>
+        private string WebSafe(string text)
+        {
+            char[] chars = text.ToLowerInvariant()
+                .ToCharArray()
+                .Select(c => char.IsLetterOrDigit(c) ? c : '-')
+                .ToArray();
+
+            string safe = new(chars);
+
+            while (safe.Contains("--"))
+                safe = safe.Replace("--", "-");
+
+            return safe.Trim('-');
+        }
+
         public Report(string xmlFilePath)
         {
             if (!File.Exists(xmlFilePath))

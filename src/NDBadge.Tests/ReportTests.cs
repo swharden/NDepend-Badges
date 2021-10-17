@@ -25,5 +25,17 @@ namespace NDBadge.Tests
             foreach (var metric in report.Metrics)
                 Console.WriteLine(metric);
         }
+
+        [Test]
+        public void Test_ReportFile_MakeLatestBadges()
+        {
+            string outputFolder = Path.GetFullPath("latest-badges");
+            if (Directory.Exists(outputFolder))
+                Directory.Delete(outputFolder, true);
+            Directory.CreateDirectory(outputFolder);
+
+            var report = new Report(REPORT_PATH);
+            report.MakeBadges(report.LatestMetrics, outputFolder);
+        }
     }
 }
