@@ -13,11 +13,7 @@ namespace NDBadge.Tests
         public void Test_Badge_Save()
         {
             string filePath = System.IO.Path.GetFullPath("save.png");
-            var badge = new Badge("Tests", "1234")
-            {
-                BackgroundRight = Microsoft.Maui.Graphics.Color.FromArgb("#3cc51d"),
-            };
-
+            var badge = new Badge("Tests", "1234");
             badge.SavePng(filePath, 1);
             Console.WriteLine(filePath);
         }
