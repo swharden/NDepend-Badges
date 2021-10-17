@@ -1,5 +1,7 @@
 # NDepend Badges
 
+[![CI](https://github.com/swharden/NDepend-Badges/actions/workflows/ci.yaml/badge.svg)](https://github.com/swharden/NDepend-Badges/actions/workflows/ci.yaml)
+
 **This project creates status badges that display code metrics from [NDepend](https://www.ndepend.com/) reports.** Badges are similar in style to those created by [badgen.net](https://badgen.net/) and [shields.io](https://shields.io/).
 
 ```cs
