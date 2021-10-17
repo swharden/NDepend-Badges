@@ -1,9 +1,9 @@
 # NDepend Badges
 
-This project demonstrates how to create status badges to display code metrics from NDepend reports.
+**This project creates status badges that display code metrics from [NDepend](https://www.ndepend.com/) reports.** Badges are similar in style to those created by [badgen.net](https://badgen.net/) and [shields.io](https://shields.io/).
 
 ```cs
-var report = new Report("myReport.xml");
+var report = new Report("NDependTrendData.xml");
 report.MakeBadges(report.LatestMetrics, "badges/");
 ```
 
